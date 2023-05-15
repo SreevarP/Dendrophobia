@@ -87,8 +87,14 @@ public class Player extends Entity{
 			
 			break;
 		}
-		if(vely==0&&velx==0)
+			if(vely==0&&velx==0&&direction.equals("up"))
+			image=up1;
+		else if(vely==0&&velx==0&&direction.equals("down"))
 			image=down1;
+		else if(vely==0&&velx==0&&direction.equals("right"))
+			image=right1;
+		else if(vely==0&&velx==0&&direction.equals("left"))
+			image=left1;
 		g2d.drawImage(image, x, y, 100, 100, null);
 	}
 public void setPlayerImg(){
